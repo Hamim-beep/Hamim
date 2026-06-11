@@ -1,18 +1,14 @@
 #include <stdio.h>
 
-int main()
-{
-    int i, n, fact=1;
-
-    printf("Enter the value of number:\n");
-    scanf("%d", &n);
-
-    for(i = 1; i <= n; i++)
-    {
-        fact= fact*i;
+int factorial(int n) {
+    int fact = 1;
+    for(int i = 1; i <= n; i++) {
+        fact *= i;
     }
+    return fact;
+}
 
-    printf("Factorial= %d\n", fact);
-
+int main() {
+    printf("Factorial = %d", factorial(5));
     return 0;
 }
