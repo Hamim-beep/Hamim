@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void main() {
+    int num1 = 0, num2 = 1, n, i, fib;
+    printf("Enter the value of n:\n");
+    scanf("%d", &n);
+
+    for(i=1; i<=n-2; i++) {
+        fib = num1 + num2;
+        num1 = num2;
+        num2 = fib;
+    }
+    printf("\n %dth Fibonacci Number %d",n,fib);
+}
